@@ -8,6 +8,19 @@
 
 > **Portfolio demo, not a ticketing connector.** The included events and KB articles are entirely synthetic. This project does **not** connect to ServiceNow, Jira, Active Directory, Entra ID, SailPoint, NetIQ or production accounts, and never modifies tickets or identities. It is not a substitute for an organization's access approval or incident management policies.
 
+## Portfolio overview and measured limitations
+
+**[Guided two-minute walkthrough](docs/PORTFOLIO_WALKTHROUGH.md)** · **[Reproducible evaluation and error analysis](evaluation/README.md)** · **[Architecture](docs/ARCHITECTURE.md)**
+
+| Synthetic evaluation | Category recommendations | Priority suggestions |
+| --- | ---: | ---: |
+| Familiar, authored demo tickets (18) | **18/18** | **18/18** |
+| Separate paraphrase/negation challenge (12) | **7/12** | **11/12** |
+
+The **five category errors** expose phrase-matching limitations; a challenge ticket containing *“no confirmed service outage”* is incorrectly flagged P1. That is a known failure mode, not a hidden edge case. The original demo also ranks the intended playbook first for **18/18** tickets and finds the one marked duplicate pair.
+
+**These are small, hand-labeled synthetic exercises, not independent production accuracy estimates, measured AI-model performance, or validated enterprise SLA results.** No LLM is used for classification. Run `python -m evaluation.evaluate` to reproduce every finding and see the error IDs.
+
 ## Explore the demo
 
 **[Open the interactive HTML triage report](https://norones-rgb.github.io/ai-iam-ticket-triage-copilot/)** *(available after enabling GitHub Pages → main → /docs)*
