@@ -1,0 +1,86 @@
+[
+  {
+    "ticket_id": "CH001",
+    "source": "jira",
+    "subject": "Cannot authenticate after lock",
+    "description": "The employee got locked from the domain after repeated failed attempts.",
+    "created_at": "2026-11-05T08:00:00Z"
+  },
+  {
+    "ticket_id": "CH002",
+    "source": "servicenow",
+    "subject": "Finance application 403",
+    "description": "New colleague sees permission denied. Please add read-only access to the dashboard.",
+    "created_at": "2026-11-05T08:02:00Z"
+  },
+  {
+    "ticket_id": "CH003",
+    "source": "jira",
+    "subject": "Directory account missing",
+    "description": "Driver stopped processing SCIM records overnight.",
+    "created_at": "2026-11-05T08:04:00Z"
+  },
+  {
+    "ticket_id": "CH004",
+    "source": "servicenow",
+    "subject": "Former employee still has login",
+    "description": "An employee left yesterday; check whether old logins are still valid.",
+    "created_at": "2026-11-05T08:06:00Z"
+  },
+  {
+    "ticket_id": "CH005",
+    "source": "servicenow",
+    "subject": "Second factor not working",
+    "description": "Token not displayed in authentication app after phone replacement.",
+    "created_at": "2026-11-05T08:08:00Z"
+  },
+  {
+    "ticket_id": "CH006",
+    "source": "jira",
+    "subject": "No available Confluence seats",
+    "description": "The license pool has no free seats for the project team.",
+    "created_at": "2026-11-05T08:10:00Z"
+  },
+  {
+    "ticket_id": "CH007",
+    "source": "jira",
+    "subject": "Mixed access movement",
+    "description": "Request access to new platform and revoke access to legacy system.",
+    "created_at": "2026-11-05T08:12:00Z"
+  },
+  {
+    "ticket_id": "CH008",
+    "source": "servicenow",
+    "subject": "Department transfer not completed",
+    "description": "Employee moved departments; role change incomplete in the new department.",
+    "created_at": "2026-11-05T08:14:00Z"
+  },
+  {
+    "ticket_id": "CH009",
+    "source": "jira",
+    "subject": "Download log report issue",
+    "description": "Company-wide report download is delayed. No confirmed service outage.",
+    "created_at": "2026-11-05T08:16:00Z"
+  },
+  {
+    "ticket_id": "CH010",
+    "source": "servicenow",
+    "subject": "Unexpected sign-in history",
+    "description": "Several failed authentications were seen, but no account lockout was reported.",
+    "created_at": "2026-11-05T08:18:00Z"
+  },
+  {
+    "ticket_id": "CH011",
+    "source": "jira",
+    "subject": "Reporting viewer authorization",
+    "description": "Manager approved a reporting viewer role. Provision it to the workspace.",
+    "created_at": "2026-11-05T08:20:00Z"
+  },
+  {
+    "ticket_id": "CH012",
+    "source": "servicenow",
+    "subject": "Production outage provisioning failed",
+    "description": "All employees cannot provision accounts during an outage.",
+    "created_at": "2026-11-05T08:22:00Z"
+  }
+]
