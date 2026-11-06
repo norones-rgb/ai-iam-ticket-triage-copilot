@@ -1,0 +1,33 @@
+name: Python tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Validate and run tests
+        run: |
+          python -m compileall -q iam_ticket_copilot
+          python -m unittest discover -s tests -v
+      - name: CLI smoke test
+        run: |
+          python -m iam_ticket_copilot --tickets samples/synthetic_tickets.json --kb samples/kb/iam_playbooks.json --output out
+          test -s out/index.html
+          test -s out/triage.json
+          test -s out/triage.csv

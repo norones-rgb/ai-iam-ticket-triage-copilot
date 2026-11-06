@@ -1,0 +1,838 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-06T21:49:10+00:00",
+  "mode": "read-only advisory",
+  "statistics": {
+    "tickets_processed": 18,
+    "category_counts": {
+      "Access Request": 2,
+      "Account Lockout": 2,
+      "License / Entitlement": 2,
+      "MFA Support": 3,
+      "Mover / Role Change": 2,
+      "Needs Analyst Review": 2,
+      "Offboarding": 2,
+      "Provisioning Failure": 3
+    },
+    "priority_counts": {
+      "P1": 1,
+      "P2": 1,
+      "P3": 16
+    },
+    "possible_duplicate_pairs": 1,
+    "needs_analyst_review": 2,
+    "local_ai_used": 0
+  },
+  "tickets": [
+    {
+      "ticket_id": "INC1001",
+      "source": "servicenow",
+      "subject": "Provisioning failed for new hire in finance",
+      "category": "Provisioning Failure",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "provisioning failed",
+        "driver stopped",
+        "netiq driver",
+        "no account created"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "IAM Provisioning Operations",
+      "summary": "Suggested provisioning failure triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Review connector status, last successful sync and provisioning error codes.",
+        "Correlate the user's source identity record with the target application record.",
+        "Check retry queues and change records; obtain approval before any retry."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-001",
+          "title": "Provisioning connector failures and sync queue investigation",
+          "snippet": "Check health and last successful run for the provisioning connector. Compare the source HR event with the target account state, review driver and SCIM errors, and identify queued events. Record timestamps and correlate retry jobs ",
+          "retrieval_score": 8.933
+        },
+        {
+          "article_id": "KB-IAM-009",
+          "title": "Enterprise IAM incident impact and escalation policy example",
+          "snippet": "When an enterprise-wide provisioning outage is suspected, confirm affected identities, duration, downstream risk and incident severity against the actual organization's declared criteria. Report validated impact and escalate to th",
+          "retrieval_score": 5.995
+        },
+        {
+          "article_id": "KB-IAM-003",
+          "title": "Account lockout and authentication evidence review",
+          "snippet": "Verify requester identity with documented help-desk steps. Check sign-in and directory lockout logs, timestamps, originating device, and repeated failed password attempts. Document findings and use approved reset/unlock procedures",
+          "retrieval_score": 3.873
+        }
+      ],
+      "possible_duplicates": [
+        {
+          "ticket_id": "INC1002",
+          "similarity": 0.923
+        }
+      ],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1002",
+      "source": "servicenow",
+      "subject": "Finance new hire provisioning failure",
+      "category": "Provisioning Failure",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "provisioning failed",
+        "provisioning failure",
+        "driver stopped",
+        "netiq driver",
+        "no account created"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "IAM Provisioning Operations",
+      "summary": "Suggested provisioning failure triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Review connector status, last successful sync and provisioning error codes.",
+        "Correlate the user's source identity record with the target application record.",
+        "Check retry queues and change records; obtain approval before any retry."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-001",
+          "title": "Provisioning connector failures and sync queue investigation",
+          "snippet": "Check health and last successful run for the provisioning connector. Compare the source HR event with the target account state, review driver and SCIM errors, and identify queued events. Record timestamps and correlate retry jobs ",
+          "retrieval_score": 8.933
+        },
+        {
+          "article_id": "KB-IAM-009",
+          "title": "Enterprise IAM incident impact and escalation policy example",
+          "snippet": "When an enterprise-wide provisioning outage is suspected, confirm affected identities, duration, downstream risk and incident severity against the actual organization's declared criteria. Report validated impact and escalate to th",
+          "retrieval_score": 5.995
+        },
+        {
+          "article_id": "KB-IAM-005",
+          "title": "Mover lifecycle role mapping and manager approval checks",
+          "snippet": "For a department transfer verify manager approval, effective job role, authoritative HR data, role mappings, groups and access provisioning status. Compare target-state entitlements with existing roles. Preserve logs for access re",
+          "retrieval_score": 2.066
+        }
+      ],
+      "possible_duplicates": [
+        {
+          "ticket_id": "INC1001",
+          "similarity": 0.923
+        }
+      ],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1003",
+      "source": "servicenow",
+      "subject": "Offboarding verification for terminated employee",
+      "category": "Offboarding",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "offboarding",
+        "terminated employee",
+        "termination",
+        "departed employee",
+        "revoke access"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "Identity Lifecycle Operations",
+      "summary": "Suggested offboarding triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Confirm the authoritative termination effective time and approved offboarding scope.",
+        "Compare account-disable and entitlement-revocation evidence across systems.",
+        "Escalate any potentially active post-termination access for human investigation."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-002",
+          "title": "Offboarding verification and account disable evidence",
+          "snippet": "Confirm termination effective time from the authoritative identity lifecycle record. Compare AD and cloud account disablement evidence with application entitlement removal records. Identify unresolved access and escalate through t",
+          "retrieval_score": 15.793
+        },
+        {
+          "article_id": "KB-IAM-005",
+          "title": "Mover lifecycle role mapping and manager approval checks",
+          "snippet": "For a department transfer verify manager approval, effective job role, authoritative HR data, role mappings, groups and access provisioning status. Compare target-state entitlements with existing roles. Preserve logs for access re",
+          "retrieval_score": 3.825
+        },
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 2.588
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1004",
+      "source": "jira",
+      "subject": "Leaver entitlements not removed from application",
+      "category": "Offboarding",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "offboarding",
+        "termination",
+        "departed employee",
+        "leaver",
+        "revoke access"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "Identity Lifecycle Operations",
+      "summary": "Suggested offboarding triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Confirm the authoritative termination effective time and approved offboarding scope.",
+        "Compare account-disable and entitlement-revocation evidence across systems.",
+        "Escalate any potentially active post-termination access for human investigation."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-002",
+          "title": "Offboarding verification and account disable evidence",
+          "snippet": "Confirm termination effective time from the authoritative identity lifecycle record. Compare AD and cloud account disablement evidence with application entitlement removal records. Identify unresolved access and escalate through t",
+          "retrieval_score": 13.962
+        },
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 8.349
+        },
+        {
+          "article_id": "KB-IAM-005",
+          "title": "Mover lifecycle role mapping and manager approval checks",
+          "snippet": "For a department transfer verify manager approval, effective job role, authoritative HR data, role mappings, groups and access provisioning status. Compare target-state entitlements with existing roles. Preserve logs for access re",
+          "retrieval_score": 3.294
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1005",
+      "source": "servicenow",
+      "subject": "Account locked out after password change",
+      "category": "Account Lockout",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "locked out",
+        "account locked",
+        "unlock account"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "Identity Service Desk",
+      "summary": "Suggested account lockout triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Verify the requester's identity through approved help-desk procedure.",
+        "Review lockout timestamps and upstream authentication event sources.",
+        "Follow the documented unlock process only after authorization."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-003",
+          "title": "Account lockout and authentication evidence review",
+          "snippet": "Verify requester identity with documented help-desk steps. Check sign-in and directory lockout logs, timestamps, originating device, and repeated failed password attempts. Document findings and use approved reset/unlock procedures",
+          "retrieval_score": 20.2
+        },
+        {
+          "article_id": "KB-IAM-002",
+          "title": "Offboarding verification and account disable evidence",
+          "snippet": "Confirm termination effective time from the authoritative identity lifecycle record. Compare AD and cloud account disablement evidence with application entitlement removal records. Identify unresolved access and escalate through t",
+          "retrieval_score": 1.433
+        },
+        {
+          "article_id": "KB-IAM-004",
+          "title": "MFA authenticator enrollment and recovery troubleshooting",
+          "snippet": "Validate the user with the organization's recovery policy. Investigate authenticator enrollment, missing push notification, recent device replacement and verification code delivery. Escalate suspicious or unexpected MFA push appro",
+          "retrieval_score": 1.433
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1006",
+      "source": "servicenow",
+      "subject": "Locked out of account in morning",
+      "category": "Account Lockout",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "locked out",
+        "account locked"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "Identity Service Desk",
+      "summary": "Suggested account lockout triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Verify the requester's identity through approved help-desk procedure.",
+        "Review lockout timestamps and upstream authentication event sources.",
+        "Follow the documented unlock process only after authorization."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-003",
+          "title": "Account lockout and authentication evidence review",
+          "snippet": "Verify requester identity with documented help-desk steps. Check sign-in and directory lockout logs, timestamps, originating device, and repeated failed password attempts. Document findings and use approved reset/unlock procedures",
+          "retrieval_score": 11.933
+        },
+        {
+          "article_id": "KB-IAM-004",
+          "title": "MFA authenticator enrollment and recovery troubleshooting",
+          "snippet": "Validate the user with the organization's recovery policy. Investigate authenticator enrollment, missing push notification, recent device replacement and verification code delivery. Escalate suspicious or unexpected MFA push appro",
+          "retrieval_score": 1.433
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1007",
+      "source": "jira",
+      "subject": "Authenticator push notification not received",
+      "category": "MFA Support",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "mfa",
+        "authenticator",
+        "push notification"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "Identity Authentication Support",
+      "summary": "Suggested mfa support triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Verify identity using the approved recovery process.",
+        "Check registered factors, recent challenges and device changes.",
+        "Escalate unexpected MFA approvals or push fatigue indicators."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-004",
+          "title": "MFA authenticator enrollment and recovery troubleshooting",
+          "snippet": "Validate the user with the organization's recovery policy. Investigate authenticator enrollment, missing push notification, recent device replacement and verification code delivery. Escalate suspicious or unexpected MFA push appro",
+          "retrieval_score": 27.323
+        },
+        {
+          "article_id": "KB-IAM-008",
+          "title": "IAM triage intake completeness checklist",
+          "snippet": "For incomplete IAM tickets ask for affected application, request type, approximate timestamp, error details, authorization context and business impact. Route to the IAM triage queue until classification is supported by evidence. D",
+          "retrieval_score": 2.143
+        },
+        {
+          "article_id": "KB-IAM-007",
+          "title": "SaaS license assignment and entitlement reconciliation",
+          "snippet": "Check subscription usage, license pool, last activity, entitlement owner and assignment group. For Jira or Confluence license requests, confirm the requester is approved and a license seat is available. Review reclaim candidates b",
+          "retrieval_score": 2.091
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1008",
+      "source": "servicenow",
+      "subject": "MFA verification code unavailable",
+      "category": "MFA Support",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "mfa",
+        "verification code"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "Identity Authentication Support",
+      "summary": "Suggested mfa support triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Verify identity using the approved recovery process.",
+        "Check registered factors, recent challenges and device changes.",
+        "Escalate unexpected MFA approvals or push fatigue indicators."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-004",
+          "title": "MFA authenticator enrollment and recovery troubleshooting",
+          "snippet": "Validate the user with the organization's recovery policy. Investigate authenticator enrollment, missing push notification, recent device replacement and verification code delivery. Escalate suspicious or unexpected MFA push appro",
+          "retrieval_score": 16.123
+        },
+        {
+          "article_id": "KB-IAM-002",
+          "title": "Offboarding verification and account disable evidence",
+          "snippet": "Confirm termination effective time from the authoritative identity lifecycle record. Compare AD and cloud account disablement evidence with application entitlement removal records. Identify unresolved access and escalate through t",
+          "retrieval_score": 4.298
+        },
+        {
+          "article_id": "KB-IAM-003",
+          "title": "Account lockout and authentication evidence review",
+          "snippet": "Verify requester identity with documented help-desk steps. Check sign-in and directory lockout logs, timestamps, originating device, and repeated failed password attempts. Document findings and use approved reset/unlock procedures",
+          "retrieval_score": 3.351
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1009",
+      "source": "jira",
+      "subject": "Department transfer missing role mapping",
+      "category": "Mover / Role Change",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "department transfer",
+        "new department",
+        "role mapping"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "Identity Governance Operations",
+      "summary": "Suggested mover / role change triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Verify the authoritative department/role effective date and manager approvals.",
+        "Compare requested entitlements with current group membership and role mappings.",
+        "Review mover workflow execution evidence before manual remediation."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-005",
+          "title": "Mover lifecycle role mapping and manager approval checks",
+          "snippet": "For a department transfer verify manager approval, effective job role, authoritative HR data, role mappings, groups and access provisioning status. Compare target-state entitlements with existing roles. Preserve logs for access re",
+          "retrieval_score": 24.847
+        },
+        {
+          "article_id": "KB-IAM-007",
+          "title": "SaaS license assignment and entitlement reconciliation",
+          "snippet": "Check subscription usage, license pool, last activity, entitlement owner and assignment group. For Jira or Confluence license requests, confirm the requester is approved and a license seat is available. Review reclaim candidates b",
+          "retrieval_score": 2.935
+        },
+        {
+          "article_id": "KB-IAM-008",
+          "title": "IAM triage intake completeness checklist",
+          "snippet": "For incomplete IAM tickets ask for affected application, request type, approximate timestamp, error details, authorization context and business impact. Route to the IAM triage queue until classification is supported by evidence. D",
+          "retrieval_score": 2.143
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1010",
+      "source": "servicenow",
+      "subject": "Team transfer access not updated",
+      "category": "Mover / Role Change",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "role change",
+        "new department",
+        "team transfer"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "Identity Governance Operations",
+      "summary": "Suggested mover / role change triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Verify the authoritative department/role effective date and manager approvals.",
+        "Compare requested entitlements with current group membership and role mappings.",
+        "Review mover workflow execution evidence before manual remediation."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-005",
+          "title": "Mover lifecycle role mapping and manager approval checks",
+          "snippet": "For a department transfer verify manager approval, effective job role, authoritative HR data, role mappings, groups and access provisioning status. Compare target-state entitlements with existing roles. Preserve logs for access re",
+          "retrieval_score": 20.253
+        },
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 4.429
+        },
+        {
+          "article_id": "KB-IAM-002",
+          "title": "Offboarding verification and account disable evidence",
+          "snippet": "Confirm termination effective time from the authoritative identity lifecycle record. Compare AD and cloud account disablement evidence with application entitlement removal records. Identify unresolved access and escalate through t",
+          "retrieval_score": 2.17
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "REQ1011",
+      "source": "servicenow",
+      "subject": "Request access to project collaboration site",
+      "category": "Access Request",
+      "match_strength": "moderate",
+      "evidence_signals": [
+        "request access"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "IAM Access Fulfillment",
+      "summary": "Suggested access request triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Confirm the application, access scope and business justification.",
+        "Verify the approval route and separation-of-duties requirements.",
+        "Do not grant access until normal owner and manager approvals complete."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 12.362
+        },
+        {
+          "article_id": "KB-IAM-005",
+          "title": "Mover lifecycle role mapping and manager approval checks",
+          "snippet": "For a department transfer verify manager approval, effective job role, authoritative HR data, role mappings, groups and access provisioning status. Compare target-state entitlements with existing roles. Preserve logs for access re",
+          "retrieval_score": 4.74
+        },
+        {
+          "article_id": "KB-IAM-008",
+          "title": "IAM triage intake completeness checklist",
+          "snippet": "For incomplete IAM tickets ask for affected application, request type, approximate timestamp, error details, authorization context and business impact. Route to the IAM triage queue until classification is supported by evidence. D",
+          "retrieval_score": 2.83
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "REQ1012",
+      "source": "jira",
+      "subject": "Permission request for reporting workspace",
+      "category": "Access Request",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "needs access",
+        "permission request"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "IAM Access Fulfillment",
+      "summary": "Suggested access request triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Confirm the application, access scope and business justification.",
+        "Verify the approval route and separation-of-duties requirements.",
+        "Do not grant access until normal owner and manager approvals complete."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 19.417
+        },
+        {
+          "article_id": "KB-IAM-005",
+          "title": "Mover lifecycle role mapping and manager approval checks",
+          "snippet": "For a department transfer verify manager approval, effective job role, authoritative HR data, role mappings, groups and access provisioning status. Compare target-state entitlements with existing roles. Preserve logs for access re",
+          "retrieval_score": 4.283
+        },
+        {
+          "article_id": "KB-IAM-008",
+          "title": "IAM triage intake completeness checklist",
+          "snippet": "For incomplete IAM tickets ask for affected application, request type, approximate timestamp, error details, authorization context and business impact. Route to the IAM triage queue until classification is supported by evidence. D",
+          "retrieval_score": 3.901
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "JIRA1013",
+      "source": "jira",
+      "subject": "Confluence license seat exhausted",
+      "category": "License / Entitlement",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "license",
+        "subscription"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "SaaS Access Operations",
+      "summary": "Suggested license / entitlement triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Verify the license pool, active assignment and subscription owner.",
+        "Check entitlement need and approved reclaim/reassign policy.",
+        "Obtain approval before changing any license assignment."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-007",
+          "title": "SaaS license assignment and entitlement reconciliation",
+          "snippet": "Check subscription usage, license pool, last activity, entitlement owner and assignment group. For Jira or Confluence license requests, confirm the requester is approved and a license seat is available. Review reclaim candidates b",
+          "retrieval_score": 25.076
+        },
+        {
+          "article_id": "KB-IAM-003",
+          "title": "Account lockout and authentication evidence review",
+          "snippet": "Verify requester identity with documented help-desk steps. Check sign-in and directory lockout logs, timestamps, originating device, and repeated failed password attempts. Document findings and use approved reset/unlock procedures",
+          "retrieval_score": 1.936
+        },
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 1.099
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "JIRA1014",
+      "source": "jira",
+      "subject": "Jira subscription entitlement review",
+      "category": "License / Entitlement",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "license",
+        "subscription",
+        "entitlement usage"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "default suggestion; verify urgency and impact"
+      ],
+      "assignment_group": "SaaS Access Operations",
+      "summary": "Suggested license / entitlement triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Verify the license pool, active assignment and subscription owner.",
+        "Check entitlement need and approved reclaim/reassign policy.",
+        "Obtain approval before changing any license assignment."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-007",
+          "title": "SaaS license assignment and entitlement reconciliation",
+          "snippet": "Check subscription usage, license pool, last activity, entitlement owner and assignment group. For Jira or Confluence license requests, confirm the requester is approved and a license seat is available. Review reclaim candidates b",
+          "retrieval_score": 25.289
+        },
+        {
+          "article_id": "KB-IAM-002",
+          "title": "Offboarding verification and account disable evidence",
+          "snippet": "Confirm termination effective time from the authoritative identity lifecycle record. Compare AD and cloud account disablement evidence with application entitlement removal records. Identify unresolved access and escalate through t",
+          "retrieval_score": 4.131
+        },
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 3.296
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1015",
+      "source": "servicenow",
+      "subject": "Unexpected access issue",
+      "category": "Needs Analyst Review",
+      "match_strength": "unmatched",
+      "evidence_signals": [],
+      "priority": "P3",
+      "priority_reasons": [
+        "unclear impact; manual assessment required"
+      ],
+      "assignment_group": "IAM Triage Queue",
+      "summary": "Suggested needs analyst review triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Request the affected application, account, error text and timeframe.",
+        "Check the supported runbooks and route to the IAM triage queue.",
+        "Do not infer entitlements or perform automated changes."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-008",
+          "title": "IAM triage intake completeness checklist",
+          "snippet": "For incomplete IAM tickets ask for affected application, request type, approximate timestamp, error details, authorization context and business impact. Route to the IAM triage queue until classification is supported by evidence. D",
+          "retrieval_score": 7.008
+        },
+        {
+          "article_id": "KB-IAM-002",
+          "title": "Offboarding verification and account disable evidence",
+          "snippet": "Confirm termination effective time from the authoritative identity lifecycle record. Compare AD and cloud account disablement evidence with application entitlement removal records. Identify unresolved access and escalate through t",
+          "retrieval_score": 4.131
+        },
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 2.978
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1016",
+      "source": "jira",
+      "subject": "Company-wide provisioning outage after connector failure",
+      "category": "Provisioning Failure",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "provisioning failed",
+        "connector error"
+      ],
+      "priority": "P1",
+      "priority_reasons": [
+        "potential broad service impact",
+        "human validation required"
+      ],
+      "assignment_group": "IAM Provisioning Operations",
+      "summary": "Suggested provisioning failure triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Review connector status, last successful sync and provisioning error codes.",
+        "Correlate the user's source identity record with the target application record.",
+        "Check retry queues and change records; obtain approval before any retry."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-009",
+          "title": "Enterprise IAM incident impact and escalation policy example",
+          "snippet": "When an enterprise-wide provisioning outage is suspected, confirm affected identities, duration, downstream risk and incident severity against the actual organization's declared criteria. Report validated impact and escalate to th",
+          "retrieval_score": 18.965
+        },
+        {
+          "article_id": "KB-IAM-001",
+          "title": "Provisioning connector failures and sync queue investigation",
+          "snippet": "Check health and last successful run for the provisioning connector. Compare the source HR event with the target account state, review driver and SCIM errors, and identify queued events. Record timestamps and correlate retry jobs ",
+          "retrieval_score": 12.127
+        },
+        {
+          "article_id": "KB-IAM-003",
+          "title": "Account lockout and authentication evidence review",
+          "snippet": "Verify requester identity with documented help-desk steps. Check sign-in and directory lockout logs, timestamps, originating device, and repeated failed password attempts. Document findings and use approved reset/unlock procedures",
+          "retrieval_score": 5.809
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1017",
+      "source": "servicenow",
+      "subject": "Executive MFA recovery request",
+      "category": "MFA Support",
+      "match_strength": "strong",
+      "evidence_signals": [
+        "mfa",
+        "authenticator"
+      ],
+      "priority": "P2",
+      "priority_reasons": [
+        "potential elevated impact",
+        "confirm with incident policy"
+      ],
+      "assignment_group": "Identity Authentication Support",
+      "summary": "Suggested mfa support triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Verify identity using the approved recovery process.",
+        "Check registered factors, recent challenges and device changes.",
+        "Escalate unexpected MFA approvals or push fatigue indicators."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-004",
+          "title": "MFA authenticator enrollment and recovery troubleshooting",
+          "snippet": "Validate the user with the organization's recovery policy. Investigate authenticator enrollment, missing push notification, recent device replacement and verification code delivery. Escalate suspicious or unexpected MFA push appro",
+          "retrieval_score": 18.773
+        },
+        {
+          "article_id": "KB-IAM-002",
+          "title": "Offboarding verification and account disable evidence",
+          "snippet": "Confirm termination effective time from the authoritative identity lifecycle record. Compare AD and cloud account disablement evidence with application entitlement removal records. Identify unresolved access and escalate through t",
+          "retrieval_score": 4.826
+        },
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 1.966
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    },
+    {
+      "ticket_id": "INC1018",
+      "source": "jira",
+      "subject": "Mixed request: revoke access and grant access",
+      "category": "Needs Analyst Review",
+      "match_strength": "ambiguous",
+      "evidence_signals": [
+        "request access",
+        "revoke access"
+      ],
+      "priority": "P3",
+      "priority_reasons": [
+        "unclear impact; manual assessment required"
+      ],
+      "assignment_group": "IAM Triage Queue",
+      "summary": "Suggested needs analyst review triage based on matched text signals. Verify ticket context, identity and impact before acting.",
+      "next_steps": [
+        "Request the affected application, account, error text and timeframe.",
+        "Check the supported runbooks and route to the IAM triage queue.",
+        "Do not infer entitlements or perform automated changes."
+      ],
+      "citations": [
+        {
+          "article_id": "KB-IAM-006",
+          "title": "Application access request approval and entitlement fulfillment",
+          "snippet": "Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on t",
+          "retrieval_score": 8.362
+        },
+        {
+          "article_id": "KB-IAM-008",
+          "title": "IAM triage intake completeness checklist",
+          "snippet": "For incomplete IAM tickets ask for affected application, request type, approximate timestamp, error details, authorization context and business impact. Route to the IAM triage queue until classification is supported by evidence. D",
+          "retrieval_score": 6.83
+        },
+        {
+          "article_id": "KB-IAM-005",
+          "title": "Mover lifecycle role mapping and manager approval checks",
+          "snippet": "For a department transfer verify manager approval, effective job role, authoritative HR data, role mappings, groups and access provisioning status. Compare target-state entitlements with existing roles. Preserve logs for access re",
+          "retrieval_score": 5.526
+        }
+      ],
+      "possible_duplicates": [],
+      "explanation_mode": "rules"
+    }
+  ]
+}

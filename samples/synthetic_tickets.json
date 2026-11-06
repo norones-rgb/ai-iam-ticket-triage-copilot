@@ -1,0 +1,146 @@
+[
+  {
+    "ticket_id": "INC1001",
+    "source": "servicenow",
+    "subject": "Provisioning failed for new hire in finance",
+    "description": "NetIQ driver stopped overnight; provisioning failed and no account created for the finance application.",
+    "created_at": "2026-11-02T08:44:00Z",
+    "state": "new"
+  },
+  {
+    "ticket_id": "INC1002",
+    "source": "servicenow",
+    "subject": "Finance new hire provisioning failure",
+    "description": "NetIQ driver stopped overnight and no account created in the finance application; provisioning failed.",
+    "created_at": "2026-11-02T08:49:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "INC1003",
+    "source": "servicenow",
+    "subject": "Offboarding verification for terminated employee",
+    "description": "Termination effective today. Verify departed employee account disablement and revoke access to the billing system.",
+    "created_at": "2026-11-02T09:15:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "INC1004",
+    "source": "jira",
+    "subject": "Leaver entitlements not removed from application",
+    "description": "Offboarding workflow has a stale entitlement for a departed employee. Confirm termination and revoke access after approvals.",
+    "created_at": "2026-11-02T09:18:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "INC1005",
+    "source": "servicenow",
+    "subject": "Account locked out after password change",
+    "description": "Employee is locked out of the workstation following repeated password attempts. Help desk needs unlock account verification.",
+    "created_at": "2026-11-02T10:13:00Z",
+    "state": "new"
+  },
+  {
+    "ticket_id": "INC1006",
+    "source": "servicenow",
+    "subject": "Locked out of account in morning",
+    "description": "Account locked during early login attempts following password rotation, device still trying old secret.",
+    "created_at": "2026-11-02T10:14:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "INC1007",
+    "source": "jira",
+    "subject": "Authenticator push notification not received",
+    "description": "MFA authenticator app push notification was not received following device replacement.",
+    "created_at": "2026-11-03T10:20:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "INC1008",
+    "source": "servicenow",
+    "subject": "MFA verification code unavailable",
+    "description": "Employee cannot obtain MFA verification code after replacing their phone; identity verification pending.",
+    "created_at": "2026-11-03T10:32:00Z",
+    "state": "new"
+  },
+  {
+    "ticket_id": "INC1009",
+    "source": "jira",
+    "subject": "Department transfer missing role mapping",
+    "description": "Department transfer to analytics complete, but new department role mapping is not reflected in application groups.",
+    "created_at": "2026-11-03T11:14:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "INC1010",
+    "source": "servicenow",
+    "subject": "Team transfer access not updated",
+    "description": "Employee moved teams with a role change, manager approved. New department access is missing.",
+    "created_at": "2026-11-03T11:17:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "REQ1011",
+    "source": "servicenow",
+    "subject": "Request access to project collaboration site",
+    "description": "Request access to the project collaboration site for the approved delivery team. Manager signoff is pending.",
+    "created_at": "2026-11-03T12:30:00Z",
+    "state": "requested"
+  },
+  {
+    "ticket_id": "REQ1012",
+    "source": "jira",
+    "subject": "Permission request for reporting workspace",
+    "description": "Needs access to an analytics reporting workspace, app owner permission request approval not completed.",
+    "created_at": "2026-11-03T12:38:00Z",
+    "state": "requested"
+  },
+  {
+    "ticket_id": "JIRA1013",
+    "source": "jira",
+    "subject": "Confluence license seat exhausted",
+    "description": "A new member cannot use Confluence because license pool shows no available subscription seat.",
+    "created_at": "2026-11-03T14:02:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "JIRA1014",
+    "source": "jira",
+    "subject": "Jira subscription entitlement review",
+    "description": "License assignment appears unused, check entitlement usage and approval before any reclaim.",
+    "created_at": "2026-11-03T14:12:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "INC1015",
+    "source": "servicenow",
+    "subject": "Unexpected access issue",
+    "description": "Something changed with an application and the user sees an unspecified message. No error text or time was provided.",
+    "created_at": "2026-11-04T08:03:00Z",
+    "state": "new"
+  },
+  {
+    "ticket_id": "INC1016",
+    "source": "jira",
+    "subject": "Company-wide provisioning outage after connector failure",
+    "description": "Company-wide outage after connector error; provisioning failed across all employees. Incident commander needs impact verification.",
+    "created_at": "2026-11-04T09:04:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "INC1017",
+    "source": "servicenow",
+    "subject": "Executive MFA recovery request",
+    "description": "Executive lost authenticator and requests MFA recovery. Follow identity verification before any factor update.",
+    "created_at": "2026-11-04T10:12:00Z",
+    "state": "open"
+  },
+  {
+    "ticket_id": "INC1018",
+    "source": "jira",
+    "subject": "Mixed request: revoke access and grant access",
+    "description": "Request access to a new platform and revoke access from an old platform. Requires manual splitting and manager confirmation.",
+    "created_at": "2026-11-04T13:15:00Z",
+    "state": "open"
+  }
+]

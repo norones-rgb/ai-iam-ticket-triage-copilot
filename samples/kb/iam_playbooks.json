@@ -1,0 +1,56 @@
+[
+  {
+    "article_id":"KB-IAM-001",
+    "title":"Provisioning connector failures and sync queue investigation",
+    "category":"Provisioning Failure",
+    "body":"Check health and last successful run for the provisioning connector. Compare the source HR event with the target account state, review driver and SCIM errors, and identify queued events. Record timestamps and correlate retry jobs with approved changes. Do not restart or replay provisioning jobs without approval."
+  },
+  {
+    "article_id":"KB-IAM-002",
+    "title":"Offboarding verification and account disable evidence",
+    "category":"Offboarding",
+    "body":"Confirm termination effective time from the authoritative identity lifecycle record. Compare AD and cloud account disablement evidence with application entitlement removal records. Identify unresolved access and escalate through the security incident procedure before remediation."
+  },
+  {
+    "article_id":"KB-IAM-003",
+    "title":"Account lockout and authentication evidence review",
+    "category":"Account Lockout",
+    "body":"Verify requester identity with documented help-desk steps. Check sign-in and directory lockout logs, timestamps, originating device, and repeated failed password attempts. Document findings and use approved reset/unlock procedures only after authorization."
+  },
+  {
+    "article_id":"KB-IAM-004",
+    "title":"MFA authenticator enrollment and recovery troubleshooting",
+    "category":"MFA Support",
+    "body":"Validate the user with the organization's recovery policy. Investigate authenticator enrollment, missing push notification, recent device replacement and verification code delivery. Escalate suspicious or unexpected MFA push approvals instead of bypassing security controls."
+  },
+  {
+    "article_id":"KB-IAM-005",
+    "title":"Mover lifecycle role mapping and manager approval checks",
+    "category":"Mover / Role Change",
+    "body":"For a department transfer verify manager approval, effective job role, authoritative HR data, role mappings, groups and access provisioning status. Compare target-state entitlements with existing roles. Preserve logs for access review evidence."
+  },
+  {
+    "article_id":"KB-IAM-006",
+    "title":"Application access request approval and entitlement fulfillment",
+    "category":"Access Request",
+    "body":"Confirm the requested application, permission scope and business justification. Verify manager and app owner approvals and separation-of-duties restrictions in the organization's access request workflow. Never provision based on the ticket description alone."
+  },
+  {
+    "article_id":"KB-IAM-007",
+    "title":"SaaS license assignment and entitlement reconciliation",
+    "category":"License / Entitlement",
+    "body":"Check subscription usage, license pool, last activity, entitlement owner and assignment group. For Jira or Confluence license requests, confirm the requester is approved and a license seat is available. Review reclaim candidates but do not deprovision anyone automatically."
+  },
+  {
+    "article_id":"KB-IAM-008",
+    "title":"IAM triage intake completeness checklist",
+    "category":"Needs Analyst Review",
+    "body":"For incomplete IAM tickets ask for affected application, request type, approximate timestamp, error details, authorization context and business impact. Route to the IAM triage queue until classification is supported by evidence. Do not infer user permissions."
+  },
+  {
+    "article_id":"KB-IAM-009",
+    "title":"Enterprise IAM incident impact and escalation policy example",
+    "category":"Provisioning Failure",
+    "body":"When an enterprise-wide provisioning outage is suspected, confirm affected identities, duration, downstream risk and incident severity against the actual organization's declared criteria. Report validated impact and escalate to the incident commander. High priority labels from this demo are only suggestions."
+  }
+]

@@ -1,0 +1,19 @@
+ticket_id,source,subject,description,created_at,state
+INC1001,servicenow,Provisioning failed for new hire in finance,NetIQ driver stopped overnight; provisioning failed and no account created for the finance application.,2026-11-02T08:44:00Z,new
+INC1002,servicenow,Finance new hire provisioning failure,NetIQ driver stopped overnight and no account created in the finance application; provisioning failed.,2026-11-02T08:49:00Z,open
+INC1003,servicenow,Offboarding verification for terminated employee,Termination effective today. Verify departed employee account disablement and revoke access to the billing system.,2026-11-02T09:15:00Z,open
+INC1004,jira,Leaver entitlements not removed from application,Offboarding workflow has a stale entitlement for a departed employee. Confirm termination and revoke access after approvals.,2026-11-02T09:18:00Z,open
+INC1005,servicenow,Account locked out after password change,Employee is locked out of the workstation following repeated password attempts. Help desk needs unlock account verification.,2026-11-02T10:13:00Z,new
+INC1006,servicenow,Locked out of account in morning,"Account locked during early login attempts following password rotation, device still trying old secret.",2026-11-02T10:14:00Z,open
+INC1007,jira,Authenticator push notification not received,MFA authenticator app push notification was not received following device replacement.,2026-11-03T10:20:00Z,open
+INC1008,servicenow,MFA verification code unavailable,Employee cannot obtain MFA verification code after replacing their phone; identity verification pending.,2026-11-03T10:32:00Z,new
+INC1009,jira,Department transfer missing role mapping,"Department transfer to analytics complete, but new department role mapping is not reflected in application groups.",2026-11-03T11:14:00Z,open
+INC1010,servicenow,Team transfer access not updated,"Employee moved teams with a role change, manager approved. New department access is missing.",2026-11-03T11:17:00Z,open
+REQ1011,servicenow,Request access to project collaboration site,Request access to the project collaboration site for the approved delivery team. Manager signoff is pending.,2026-11-03T12:30:00Z,requested
+REQ1012,jira,Permission request for reporting workspace,"Needs access to an analytics reporting workspace, app owner permission request approval not completed.",2026-11-03T12:38:00Z,requested
+JIRA1013,jira,Confluence license seat exhausted,A new member cannot use Confluence because license pool shows no available subscription seat.,2026-11-03T14:02:00Z,open
+JIRA1014,jira,Jira subscription entitlement review,"License assignment appears unused, check entitlement usage and approval before any reclaim.",2026-11-03T14:12:00Z,open
+INC1015,servicenow,Unexpected access issue,Something changed with an application and the user sees an unspecified message. No error text or time was provided.,2026-11-04T08:03:00Z,new
+INC1016,jira,Company-wide provisioning outage after connector failure,Company-wide outage after connector error; provisioning failed across all employees. Incident commander needs impact verification.,2026-11-04T09:04:00Z,open
+INC1017,servicenow,Executive MFA recovery request,Executive lost authenticator and requests MFA recovery. Follow identity verification before any factor update.,2026-11-04T10:12:00Z,open
+INC1018,jira,Mixed request: revoke access and grant access,Request access to a new platform and revoke access from an old platform. Requires manual splitting and manager confirmation.,2026-11-04T13:15:00Z,open

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-iam-ticket-triage-copilot"
+version = "0.1.0"
+description = "Read-only IAM ticket triage with evidence-backed playbook retrieval and optional local AI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Portfolio Maintainer"}]
+keywords = ["iam", "identity", "servicenow", "jira", "ticket-triage", "rag", "ollama"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Security",
+  "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.38,<2"]
+
+[project.scripts]
+iam-ticket-copilot = "iam_ticket_copilot.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["iam_ticket_copilot*"]
