@@ -1,0 +1,151 @@
+{
+  "description": "Labels are hand-authored for small synthetic fixtures and a lexical challenge set; not a representative operational benchmark.",
+  "core": {
+    "INC1001": [
+      "Provisioning Failure",
+      "P3",
+      "KB-IAM-001"
+    ],
+    "INC1002": [
+      "Provisioning Failure",
+      "P3",
+      "KB-IAM-001"
+    ],
+    "INC1003": [
+      "Offboarding",
+      "P3",
+      "KB-IAM-002"
+    ],
+    "INC1004": [
+      "Offboarding",
+      "P3",
+      "KB-IAM-002"
+    ],
+    "INC1005": [
+      "Account Lockout",
+      "P3",
+      "KB-IAM-003"
+    ],
+    "INC1006": [
+      "Account Lockout",
+      "P3",
+      "KB-IAM-003"
+    ],
+    "INC1007": [
+      "MFA Support",
+      "P3",
+      "KB-IAM-004"
+    ],
+    "INC1008": [
+      "MFA Support",
+      "P3",
+      "KB-IAM-004"
+    ],
+    "INC1009": [
+      "Mover / Role Change",
+      "P3",
+      "KB-IAM-005"
+    ],
+    "INC1010": [
+      "Mover / Role Change",
+      "P3",
+      "KB-IAM-005"
+    ],
+    "REQ1011": [
+      "Access Request",
+      "P3",
+      "KB-IAM-006"
+    ],
+    "REQ1012": [
+      "Access Request",
+      "P3",
+      "KB-IAM-006"
+    ],
+    "JIRA1013": [
+      "License / Entitlement",
+      "P3",
+      "KB-IAM-007"
+    ],
+    "JIRA1014": [
+      "License / Entitlement",
+      "P3",
+      "KB-IAM-007"
+    ],
+    "INC1015": [
+      "Needs Analyst Review",
+      "P3",
+      "KB-IAM-008"
+    ],
+    "INC1016": [
+      "Provisioning Failure",
+      "P1",
+      "KB-IAM-009"
+    ],
+    "INC1017": [
+      "MFA Support",
+      "P2",
+      "KB-IAM-004"
+    ],
+    "INC1018": [
+      "Needs Analyst Review",
+      "P3",
+      "KB-IAM-006"
+    ]
+  },
+  "challenge": {
+    "CH001": [
+      "Account Lockout",
+      "P3"
+    ],
+    "CH002": [
+      "Access Request",
+      "P3"
+    ],
+    "CH003": [
+      "Provisioning Failure",
+      "P3"
+    ],
+    "CH004": [
+      "Offboarding",
+      "P3"
+    ],
+    "CH005": [
+      "MFA Support",
+      "P3"
+    ],
+    "CH006": [
+      "License / Entitlement",
+      "P3"
+    ],
+    "CH007": [
+      "Needs Analyst Review",
+      "P3"
+    ],
+    "CH008": [
+      "Mover / Role Change",
+      "P3"
+    ],
+    "CH009": [
+      "Needs Analyst Review",
+      "P3"
+    ],
+    "CH010": [
+      "Needs Analyst Review",
+      "P3"
+    ],
+    "CH011": [
+      "Access Request",
+      "P3"
+    ],
+    "CH012": [
+      "Provisioning Failure",
+      "P1"
+    ]
+  },
+  "expected_duplicate_pairs": [
+    [
+      "INC1001",
+      "INC1002"
+    ]
+  ]
+}
