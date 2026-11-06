@@ -31,3 +31,6 @@ jobs:
           test -s out/index.html
           test -s out/triage.json
           test -s out/triage.csv
+
+      - name: Reproduce synthetic evaluation and error report
+        run: python -m evaluation.evaluate
